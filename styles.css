@@ -1,0 +1,279 @@
+/* Axel Huerta Hernández */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fuentes */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("./fonts/Lora.ttf");
+}
+
+@font-face {
+  font-family: "HindMadurai";
+  src: url("./fonts/HindMadurai.ttf");
+}
+
+body {
+  background: #030303;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #040721;
+  min-height: 100vh;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer {
+  background: #000;
+  padding: 2em 0;
+  text-align: center;
+  border-top: 1px solid #191b1f;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  background: #030303;
+  padding: 2em 1em;
+  min-height: 100vh;
+}
+
+#biografia {
+  gap: 3em;
+  padding: 2em 1em;
+}
+
+#info-general p {
+  margin: 1em 0;
+}
+
+#hobbies,
+#contacto {
+  flex-direction: column;
+}
+
+#hobbies ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+#hobbies ul li {
+  width: 15em;
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 0.5em;
+  border: 1px solid #191b1f;
+}
+
+h1 {
+  color: #00dc82;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+h2 {
+  color: #00dc82;
+  font-size: 2.5em;
+  font-family: "Lora", sans-serif;
+}
+
+p {
+  font-family: "HindMadurai", sans-serif;
+}
+
+strong,
+em {
+  background: #083b2c;
+}
+
+li {
+  margin: 1em;
+  padding: 0 1em;
+}
+
+a {
+  color: #00dc82;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+img {
+  width: 10em;
+  height: 10em;
+  border: 0.3em solid #70ffaf;
+  border-radius: 50%;
+  transition: border-color ease-in-out 1s;
+}
+
+img:hover {
+  border-color: #ffe351;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background: #040721;
+}
+
+/* Media queries */
+
+/* Hasta 1010px */
+@media (max-width: 1010px) {
+  #biografia {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #biografia > p {
+    width: 100%;
+  }
+
+  #hobbies ul li {
+    width: 10em;
+  }
+}
+
+/* Hasta 775px */
+@media (max-width: 775px) {
+  #hobbies ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Hasta 670px */
+@media (max-width: 670px) {
+  #habilidades {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+
+  #navbar {
+    position: relative;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+  }
+}
+
+/* Hasta 625px */
+@media (max-width: 625px) {
+  #biografia > p {
+    width: 95%;
+  }
+}
+
+/* Media querie para la impresión */
+@media print {
+  h1 {
+    color: #000;
+    font-size: 2em;
+    margin-right: 1em;
+  }
+
+  h2 {
+    color: #000;
+    font-size: 1.5em;
+  }
+
+  header {
+    flex-direction: row;
+    min-height: fit-content;
+  }
+
+  img {
+    width: 5em;
+    height: 5em;
+    border: none;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  footer {
+    display: none;
+  }
+
+  a {
+    color: #083b2c;
+  }
+
+  strong,
+  em {
+    background: #fff;
+  }
+
+  header,
+  section,
+  body,
+  #biografia {
+    background: #fff;
+    color: #000;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #biografia,
+  #hobbies,
+  #habilidades,
+  #contacto {
+    min-height: fit-content;
+    display: block;
+  }
+
+  #hobbies ul {
+    display: block;
+  }
+
+  #hobbies ul li {
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
+}
